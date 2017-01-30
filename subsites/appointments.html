@@ -31,7 +31,46 @@
 
 <body>
 
-
-
+	<section class="mdl-grid">
+		<div id="aptmntform" class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp mdl-color--grey">
+			<form action="#">
+				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="Firstname">
+					<label class="mdl-textfield__label" for="Firstname">Firstname</label>
+				  </div>
+				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="Lastname">
+					<label class="mdl-textfield__label" for="Lastname">Lastname</label>
+				  </div>
+				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="bmonth">
+					<label class="mdl-textfield__label" for="bmonth">Birth Month</label>
+					<span class="mdl-textfield__error">Input is not a number!</span>
+				  </div>
+				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="bday">
+					<label class="mdl-textfield__label" for="bday">Birth Day</label>
+					<span class="mdl-textfield__error">Input is not a number!</span>
+				  </div>
+				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="byear">
+					<label class="mdl-textfield__label" for="byear">Birth Year</label>
+					<span class="mdl-textfield__error">Input is not a number!</span>
+				  </div></br>
+				  <div class="mdl-select mdl-js-select mdl-select--floating-label">
+				<select class="mdl-select__input" id="service" name="Service">
+				  <option value="default">Service</option>
+				  <option value="option1">Massage Therapy</option>
+				  <option value="option2">Sports Medicine Consultation</option>
+				  <!-- <option value="option3">option 3</option>
+				  <option value="option4">option 4</option>
+				  <option value="option5">option 5</option>
+				  -->
+				</select></br></br>
+				<input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored" style="display: inline-block;">
+			</form>
+		</div>
+	</section>
+	
 </body>
 </html>
