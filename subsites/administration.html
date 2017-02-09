@@ -1,0 +1,89 @@
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!--MDL Integration -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-blue.min.css" />
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	
+	<!--Custom CSS-->
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/appointments.css">
+
+</head>
+
+<body>
+<section class="mdl-grid">
+	<div id="aptmntform" class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp mdl-color--primary">
+		<form action="handler.php" method="post">
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" name="firstname" type="text" id="Firstname">
+				<label class="mdl-textfield__label"for="Firstname">Firstname</label>
+			  </div>
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" name="lastname" type="text" id="Lastname">
+				<label class="mdl-textfield__label" for="Lastname">Lastname</label>
+			  </div>
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" name="email" type="email" id="Email">
+				<label class="mdl-textfield__label" for="Email">Email</label>
+			  </div>
+			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" name="phone" type="tel" id="Phone">
+				<label class="mdl-textfield__label" for="Phone">Phone</label>
+			  </div>
+			  <div class="mdl-textfield mdl-js-textfield">
+				<span class="calender">Birthday:</span>
+				<input class="mdl-textfield__input" type="date" name="bday" id="Birthday">
+			  </div>
+			  <div class="mdl-select mdl-js-select mdl-select--floating-label">
+			<select class="mdl-select__input" id="service" name="service">
+			  <option value="default">Service</option>
+			  <option value="massagetherapy">Massage Therapy</option>
+			  <option value="smc">Sports Medicine Consultation</option>
+			  <!-- <option value="option3">option 3</option>
+			  <option value="option4">option 4</option>
+			  <option value="option5">option 5</option>
+			  -->
+			</select>
+			</div>
+			  <div class="mdl-textfield mdl-js-textfield">
+				<span class="calender">Day of visit:</span>
+				<input class="mdl-textfield__input" type="datetime-local" name="dov" id="Visitday">
+			 </div>
+			 <div  style="display: inline-block; padding-left: 100px;">
+			<input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">
+			</div>
+		</form>
+</section>
+<section id="info" class="mdl-grid">
+<div id="maininfo" class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp mdl-color--primary" style="text-align:center;">
+<form action="administration.php" method="post" target="php">
+<div class="mdl-textfield mdl-js-textfield">
+	<span class="calender">Search Date:</span>
+	<input class="mdl-textfield__input" type="date" name="sd" id="searchday">
+</div>
+<div  style="display: inline-block; padding-left: 100px;">
+<input type="submit" class="mdl-button mdl-button--raised mdl-js-button mdl-button--colored">
+</div>
+</form>
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("data").innerHTML = xmlhttp.responseText;
+    }
+};
+xhttp.open("GET", "data.xml", true);
+xhttp.send();
+</script>
+<iframe name="php"></iframe>
+<p id="data"></p>
+</div>
+</section>
+</body>
+</html>
