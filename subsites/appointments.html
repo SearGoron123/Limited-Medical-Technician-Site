@@ -32,7 +32,7 @@
 <body>
 	
 	<section class="mdl-grid">
-		<div id="aptmntform" class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp mdl-color--primary">
+		<div id="aptmntform" class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp mdl-color--primary">
 			<form action="handler.php" method="post">
 				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" name="firstname" type="text" id="Firstname">
@@ -41,10 +41,6 @@
 				  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" name="lastname" type="text" id="Lastname">
 					<label class="mdl-textfield__label" for="Lastname">Lastname</label>
-				  </div>
-				  <div class="mdl-textfield mdl-js-textfield">
-					<span class="calender">Birthday:</span>
-					<input class="mdl-textfield__input" type="date" name="bday" id="Birthday">
 				  </div>
 			  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" name="email" type="email" id="Email">
@@ -65,6 +61,10 @@
 				  -->
 				</select>
 				</div>
+				  <div class="mdl-textfield mdl-js-textfield">
+					<span class="calender">Birthday:</span>
+					<input class="mdl-textfield__input" type="date" name="bday" id="Birthday">
+				  </div>
 				  <div class="mdl-textfield mdl-js-textfield">
 					<span class="calender">Day of visit:</span>
 					<input class="mdl-textfield__input" type="datetime-local" name="dov" id="Visitday">
