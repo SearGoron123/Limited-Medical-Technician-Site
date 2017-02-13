@@ -1,6 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
+$servername = "192.168.0.12";
+$username = "admin";
 $password = "itsasecret";
 $dbname = "cct-data";
 
@@ -15,9 +15,11 @@ $lastname = $_POST["lastname"];
 $bday = $_POST["bday"];
 $service = $_POST["service"];
 $dov = $_POST["dov"];
+$email = $_POST["email"];
+$phone = $_POST["phone"];
 
-$sql = "INSERT INTO client_info (firstname, lastname, bday, service, dov)
-VALUES ('".$firstname."', '".$lastname."', '".$bday."', '".$service."', '".$dov."')";
+$sql = "INSERT INTO client_info (firstname, lastname, bday, service, dov, email, phone)
+VALUES ('".$firstname."', '".$lastname."', '".$bday."', '".$service."', '".$dov."', '".$email."', '".$phone."')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
